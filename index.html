@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nature</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <nav>
+        <h2 class="logo">Nature<span>.</span></h2>
+    </nav>
+    <div class="container">
+        <div class="img">
+            <h1 class="anim1 a">Love the Nature</h1>
+            <h1 class="anim1 b">Feel the Nature</h1>
+            <a class="anim1">Explore</a>
+        </div>
+        
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js" integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        const logo = document.getElementsByClassName('logo');
+        const container = document.querySelector('.container');
+        const a = document.getElementsByClassName('a');
+        const b = document.getElementsByClassName('b');
+        const button = document.getElementsByTagName('a');
+        gsap.from(logo, {y: 20, opacity: 0, duration: 1, })
+        gsap.from(container, {y: 20, opacity: 0, duration: 1, delay: .5 })
+        gsap.from(a, {y: 20, opacity: 0, duration: 1, delay: 1 })
+        gsap.from(b, {y: 20, opacity: 0, duration: 1, delay: 1.2 })
+        gsap.from(button, {y: 20, opacity: 0, duration: 1, delay: 1.4 })
+        gsap.to(container, {clipPath: 'polygon(7% 0%, 93% 0%, 93% 93%, 7% 93%)'},'-=.2')
+    </script>
+</body>
+</html>
